@@ -14,12 +14,11 @@ import java.util.Map;
 
 @LambdaHandler(lambdaName = "hello_world",
 	roleName = "hello_world-role",
-	isPublishVersion = true,
-	aliasName = "${lambdas_alias_name}"
+	isPublishVersion = true
 )
 @LambdaUrlConfig(
-    authType = AuthType.NONE,
-    invokeMode = InvokeMode.BUFFERED
+	authType = AuthType.NONE,
+	invokeMode = InvokeMode.BUFFERED
 )
 public class HelloWorld implements RequestHandler<APIGatewayProxyRequestEvent, APIGatewayProxyResponseEvent> {
 	@Override
